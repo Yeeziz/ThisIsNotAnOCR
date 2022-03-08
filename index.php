@@ -7,13 +7,15 @@
 </script>
 
 <?php
+	//you need to converte pdf pages into images to use the APIs
 	$imagick = new Imagick();
    	$imagick->readImage('test.pdf');
     	$imagick->writeImages('test.png', false);
 ?>
 
 <script>
-	for(let i = 0; i < 4; i++){
+    for(let i = 0; i <= 4; i++){
+      //this code is just for testing, since everytime the cicle is executed we lose one API call, and the cicle is here in order to execute the OCR on every page
       let options = {
         image: 'url-of-image',
         mode: 'ocr', // ocr
