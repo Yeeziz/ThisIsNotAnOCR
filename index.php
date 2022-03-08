@@ -9,7 +9,7 @@
 <?php
 	$imagick = new Imagick();
    	$imagick->readImage('test.pdf');
-    $imagick->writeImages('test.png', false);
+    	$imagick->writeImages('test.png', false);
 ?>
 
 <script>
